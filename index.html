@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+    <title>Slippry Slider for Map Journal</title>
+
+		<!--put your external stylesheet links here-->
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src="js/lightgallery.js"></script>
+	</head>
+
+	<style>
+
+	.slider-container {
+			height: 100%;
+			position: relative;
+	}
+	ul {
+			list-style: none outside none;
+			padding-left: 0;
+			margin-bottom:0;
+	}
+	li {
+			display: block;
+			margin-right: 6px;
+			cursor:pointer;
+	}
+	img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+			z-index: 0;
+	}
+
+/*
+	.li a {
+			background-color: rgba(255,255,255,0.6);
+	}
+
+	.lSPager li a:hover,
+	.lSPager li a:visited,
+	.lSPager li.sy-active a {
+			background-color: rgba(0,94,184,0.6);*/
+	}
+	 </style>
+
+
+	<body>
+    <div class="slider-container">
+    <ul id="lightSlider">
+        <li data-thumb="img/slide1.jpg">
+            <img src="img/slide1.jpg"/>
+        </li>
+        <li data-thumb="img/slide2.jpg">
+            <img src="img/slide2.jpg"/>
+        </li>
+        <li data-thumb="img/slide3.jpg">
+            <img src="img/slide3.jpg"/>
+        </li>
+    </ul>
+		</div>
+
+			<script>
+			$('#lightSlider').lightSlider({
+			    gallery: false, //if true, this will show three small thumbnail on the bottom
+			    item: 1,
+			    loop: true,
+			    slideMargin: 0,
+			    thumbItem: 0,
+					adaptiveHeight:true,
+					transition: 'fade', // fade, horizontal, kenburns, false
+					easing: 'fade-out', // easing to use in the animation [(see... [jquery www])]
+					continuous: false,
+					auto: false
+
+			});
+			</script>
+
+    <script src="js/lg-thumbnail.js"></script>
+    <script src="js/lg-fullscreen.js"></script>
+	</body>
+</html>
