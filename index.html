@@ -50,7 +50,49 @@
 
 
 	<body>
-    <div class="slider-container">
+
+
+<!-- <ul id="imageGallery">
+  <li data-thumb="img/thumb/slide1.jpg" data-src="img/slide1.jpg">
+    <img src="img/slide1.jpg" />
+  </li>
+  <li data-thumb="img/thumb/slide2.jpg" data-src="img/lslide2.jpg">
+    <img src="img/slide2.jpg" />
+  </li>
+</ul> -->
+<script>
+		$(document).ready(function() {
+	 $('#imageGallery').lightSlider({
+			 gallery:true,
+			 item:1,
+			 loop:true,
+			 thumbItem:9,
+			 slideMargin:0,
+			 enableDrag: false,
+			 currentPagerPosition:'left',
+			 onSliderLoad: function(el) {
+					 el.lightGallery({
+							 selector: '#imageGallery .lslide'
+					 });
+			 }
+	 });
+ });
+</script>
+
+
+				<!-- <div id="lightgallery">
+					<a href="img/slide1.jpg">
+		      		<img src="img/slide1.jpg" />
+		  		</a>
+		  		<a href="img/slide2.jpg">
+		      		<img src="img/slide2.jpg" />
+		  		</a>
+					<a href="img/slide3.jpg">
+		      		<img src="img/slide3.jpg" />
+		  		</a>
+				</div> -->
+
+    <!-- <div class="slider-container">
     <ul id="lightSlider">
         <li data-thumb="img/slide1.jpg">
             <img src="img/slide1.jpg"/>
@@ -79,6 +121,14 @@
 
 			});
 			</script>
+
+			<script type="text/javascript">
+						$(document).ready(function() {
+								$("#lightgallery").lightGallery();
+						});
+			</script> -->
+
+
 
     <script src="js/lg-thumbnail.js"></script>
     <script src="js/lg-fullscreen.js"></script>
