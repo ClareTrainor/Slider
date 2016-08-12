@@ -51,24 +51,33 @@
 
 	<body>
 
+<div class="slider-container">
+<ul id="imageGallery">
+		<li data-thumb="img/slide1.jpg" data-scr="img/slide1.jpg">
+				<img src="img/slide1.jpg"/>
+		</li>
+		<li data-thumb="img/slide2.jpg" data-src="img/slide2.jpg">
+				<img src="img/slide2.jpg"/>
+		</li>
+		<li data-thumb="img/slide3.jpg" data-src="img/slide3.jpg">
+				<img src="img/slide3.jpg"/>
+		</li>
+</ul>
+</div>
 
-<!-- <ul id="imageGallery">
-  <li data-thumb="img/thumb/slide1.jpg" data-src="img/slide1.jpg">
-    <img src="img/slide1.jpg" />
-  </li>
-  <li data-thumb="img/thumb/slide2.jpg" data-src="img/lslide2.jpg">
-    <img src="img/slide2.jpg" />
-  </li>
-</ul> -->
+
 <script>
 		$(document).ready(function() {
-	 $('#imageGallery').lightSlider({
-			 gallery:true,
+	  $('#imageGallery').lightSlider({
 			 item:1,
 			 loop:true,
-			 thumbItem:9,
+			 thumbItem:0,
 			 slideMargin:0,
 			 enableDrag: false,
+			 adaptiveHeight:true,
+			 transition: 'fade', // fade, horizontal, kenburns, false
+			 easing: 'fade-out', // easing to use in the animation [(see... [jquery www])]
+			 continuous: false,
 			 currentPagerPosition:'left',
 			 onSliderLoad: function(el) {
 					 el.lightGallery({
@@ -79,34 +88,16 @@
  });
 </script>
 
+<script>
+$('#lightgallery').lightGallery({
+    mode: 'lg-fade',
+  fullScreen:true,
+});
 
-				<!-- <div id="lightgallery">
-					<a href="img/slide1.jpg">
-		      		<img src="img/slide1.jpg" />
-		  		</a>
-		  		<a href="img/slide2.jpg">
-		      		<img src="img/slide2.jpg" />
-		  		</a>
-					<a href="img/slide3.jpg">
-		      		<img src="img/slide3.jpg" />
-		  		</a>
-				</div> -->
+</script>
 
-    <!-- <div class="slider-container">
-    <ul id="lightSlider">
-        <li data-thumb="img/slide1.jpg">
-            <img src="img/slide1.jpg"/>
-        </li>
-        <li data-thumb="img/slide2.jpg">
-            <img src="img/slide2.jpg"/>
-        </li>
-        <li data-thumb="img/slide3.jpg">
-            <img src="img/slide3.jpg"/>
-        </li>
-    </ul>
-		</div>
 
-			<script>
+			<!-- <script>
 			$('#lightSlider').lightSlider({
 			    gallery: false, //if true, this will show three small thumbnail on the bottom
 			    item: 1,
@@ -120,17 +111,16 @@
 					auto: false
 
 			});
-			</script>
+			</script> -->
 
 			<script type="text/javascript">
 						$(document).ready(function() {
 								$("#lightgallery").lightGallery();
 						});
-			</script> -->
+			</script>
 
 
-
-    <script src="js/lg-thumbnail.js"></script>
+    <!-- <script src="js/lg-thumbnail.js"></script> -->
     <script src="js/lg-fullscreen.js"></script>
 	</body>
 </html>
